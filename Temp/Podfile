@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Temp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Temp
+pod 'Firebase/Analytics'
+pod 'Firebase/Core'
+pod 'Firebase/Storage'
+pod 'Firebase/Database'
+
+  target 'TempTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TempUITests' do
+    # Pods for testing
+  end
+
+end
