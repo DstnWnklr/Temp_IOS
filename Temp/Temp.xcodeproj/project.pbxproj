@@ -21,6 +21,8 @@
 		6C4570482764836E005A527C /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4570462764836E005A527C /* CardViewController.xib */; };
 		6C45704A2764919F005A527C /* FirebaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4570492764919F005A527C /* FirebaseDB.swift */; };
 		6C45704C27649298005A527C /* ImageFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C45704B27649298005A527C /* ImageFolder.swift */; };
+		6CEBCDF7276621C900AB3C7D /* ImageFolderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEBCDF5276621C900AB3C7D /* ImageFolderTableCell.swift */; };
+		6CEBCDF8276621C900AB3C7D /* ImageFolderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEBCDF6276621C900AB3C7D /* ImageFolderTableCell.xib */; };
 		96A1E3501E4B5255A9149033 /* Pods_Temp_TempUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B83DC8382E7D322F2694B8F /* Pods_Temp_TempUITests.framework */; };
 		981EA934C3B8C1591205F4BE /* Pods_Temp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0651B574CB1D5062AC108AD /* Pods_Temp.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		6C4570462764836E005A527C /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		6C4570492764919F005A527C /* FirebaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDB.swift; sourceTree = "<group>"; };
 		6C45704B27649298005A527C /* ImageFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolder.swift; sourceTree = "<group>"; };
+		6CEBCDF5276621C900AB3C7D /* ImageFolderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderTableCell.swift; sourceTree = "<group>"; };
+		6CEBCDF6276621C900AB3C7D /* ImageFolderTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageFolderTableCell.xib; sourceTree = "<group>"; };
 		7BC33F9709DB464262878BDB /* Pods-Temp-TempUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Temp-TempUITests.debug.xcconfig"; path = "Target Support Files/Pods-Temp-TempUITests/Pods-Temp-TempUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B83DC8382E7D322F2694B8F /* Pods_Temp_TempUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Temp_TempUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A3340C744992C05B44576 /* Pods-Temp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Temp.release.xcconfig"; path = "Target Support Files/Pods-Temp/Pods-Temp.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				6C45701927647B84005A527C /* Main.storyboard */,
 				6C4570452764836E005A527C /* CardViewController.swift */,
 				6C4570462764836E005A527C /* CardViewController.xib */,
+				6CEBCDF5276621C900AB3C7D /* ImageFolderTableCell.swift */,
+				6CEBCDF6276621C900AB3C7D /* ImageFolderTableCell.xib */,
 				6C4570492764919F005A527C /* FirebaseDB.swift */,
 				6C45704B27649298005A527C /* ImageFolder.swift */,
 				6C45701C27647B85005A527C /* Assets.xcassets */,
@@ -293,6 +299,7 @@
 			files = (
 				6C45702027647B85005A527C /* LaunchScreen.storyboard in Resources */,
 				6C45704427647DA1005A527C /* GoogleService-Info.plist in Resources */,
+				6CEBCDF8276621C900AB3C7D /* ImageFolderTableCell.xib in Resources */,
 				6C45701D27647B85005A527C /* Assets.xcassets in Resources */,
 				6C4570482764836E005A527C /* CardViewController.xib in Resources */,
 				6C45701B27647B84005A527C /* Main.storyboard in Resources */,
@@ -423,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEBCDF7276621C900AB3C7D /* ImageFolderTableCell.swift in Sources */,
 				6C45704A2764919F005A527C /* FirebaseDB.swift in Sources */,
 				6C45704C27649298005A527C /* ImageFolder.swift in Sources */,
 				6C4570472764836E005A527C /* CardViewController.swift in Sources */,

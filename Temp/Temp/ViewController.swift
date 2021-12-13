@@ -282,7 +282,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
         // hier konfigurieren wir den Picker | aktuell greifen wir nur auf die vom Benutzer geteilte Fotobibliothek zu
         var config = PHPickerConfiguration(photoLibrary: .shared())
         // hiermit beschränken wir die Anzahl der Auswahlen auf 3
-        config.selectionLimit = 6
+        config.selectionLimit = 1
         // config.filter = .images
         config.filter = PHPickerFilter.any(of: [.images])
         

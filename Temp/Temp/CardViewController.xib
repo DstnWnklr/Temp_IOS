@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="Temp" customModuleProvider="target">
             <connections>
                 <outlet property="handleArea" destination="PVJ-1x-Cjn" id="Upi-OC-g9N"/>
+                <outlet property="tableView" destination="b3k-id-Req" id="8aw-7w-zV8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,19 +26,33 @@
                         <constraint firstAttribute="height" constant="65" id="hHg-Il-mRu"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b3k-id-Req">
+                    <rect key="frame" x="20" y="65" width="374" height="2435"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fhp-uu-DhU"/>
+                    </connections>
+                </tableView>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="b3k-id-Req" secondAttribute="trailing" constant="20" id="298-JT-2Je"/>
+                <constraint firstAttribute="bottom" secondItem="b3k-id-Req" secondAttribute="bottom" id="44Z-xE-p2i"/>
                 <constraint firstItem="PVJ-1x-Cjn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Pr-73-kfR"/>
+                <constraint firstItem="b3k-id-Req" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="H5x-jH-5Bc"/>
                 <constraint firstItem="PVJ-1x-Cjn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sw7-rg-0VO"/>
                 <constraint firstAttribute="trailing" secondItem="PVJ-1x-Cjn" secondAttribute="trailing" id="dwl-zt-hYh"/>
+                <constraint firstItem="b3k-id-Req" firstAttribute="top" secondItem="PVJ-1x-Cjn" secondAttribute="bottom" id="n3f-Zo-uc9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="35" y="85"/>
+            <point key="canvasLocation" x="34.782608695652179" y="84.375"/>
         </view>
     </objects>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Temp_Icon_Clock_Small.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Temp_Icon_Clock_Medium.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Temp_Icon_Clock_Large.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

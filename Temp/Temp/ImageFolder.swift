@@ -10,7 +10,7 @@ import UIKit
 // diese Klasse dient nur zum Speichern von Informationen
 class ImageFolder: NSObject {
     
-    private var urlLink : String
+    private let urlLink : String
     private var name : String
     private var timeRemaining : DateInterval
     private var uploadeTime : Date
@@ -19,7 +19,7 @@ class ImageFolder: NSObject {
         self.name = name
         self.urlLink = urlLink
         self.uploadeTime = Date.init()
-        self.timeRemaining = DateInterval.init(start: uploadeTime, duration: 86400)
+        self.timeRemaining = DateInterval.init(start: uploadeTime, duration: 300)
     }
     
     func getUrlLink() -> String {
@@ -38,6 +38,10 @@ class ImageFolder: NSObject {
     
     func getTimeRemaining() -> DateInterval {
         return self.timeRemaining
+    }
+    
+    func getName() -> String {
+        return self.name
     }
     
     
