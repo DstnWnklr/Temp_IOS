@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +16,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-2H-JgS">
+                        <rect key="frame" x="0.0" y="58" width="320" height="4"/>
+                    </progressView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-ZD-ciG">
                         <rect key="frame" x="10" y="10" width="300" height="100"/>
                         <subviews>
@@ -86,18 +88,21 @@
                         </subviews>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" name="Temp_Purple"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="bHd-ZD-ciG" secondAttribute="trailing" constant="10" id="C7Q-lq-oWi"/>
+                    <constraint firstItem="Zr9-2H-JgS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MuB-sK-XR6"/>
                     <constraint firstItem="bHd-ZD-ciG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZNq-vP-l79"/>
                     <constraint firstAttribute="bottom" secondItem="bHd-ZD-ciG" secondAttribute="bottom" constant="10" id="jYL-ln-xDt"/>
                     <constraint firstItem="bHd-ZD-ciG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kxy-Oh-MfG"/>
+                    <constraint firstItem="Zr9-2H-JgS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="y5a-Mo-X9s"/>
+                    <constraint firstItem="Zr9-2H-JgS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="z9D-r9-LZr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="downloadLabel" destination="lei-fv-w7g" id="3Ea-iz-v0G"/>
                 <outlet property="header" destination="uEf-8X-qBG" id="0QC-nw-gFD"/>
+                <outlet property="progressView" destination="Zr9-2H-JgS" id="ZnA-RO-A2L"/>
                 <outlet property="timeLabel" destination="3MW-0e-SDC" id="82c-jY-nkb"/>
             </connections>
             <point key="canvasLocation" x="13" y="27"/>
@@ -106,8 +111,5 @@
     <resources>
         <image name="Temp_Icon_Clock" width="200" height="200"/>
         <image name="Temp_Icon_Download" width="200" height="200"/>
-        <namedColor name="Temp_Purple">
-            <color red="0.46666666666666667" green="0.3411764705882353" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

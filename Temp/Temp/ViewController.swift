@@ -36,6 +36,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     let cardHeight : CGFloat = 850
     let heightStop : CGFloat = 100
     let cardHandleAreaHeight : CGFloat = 65
+    var addButtonPosition : Float = 0.0
     
     // wenn die Card ausgefahren ist, wird es true, im eingefahrenen Zustand false
     var cardVisible = false
@@ -52,6 +53,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCard()
+        addButtonPosition = Float(addButtonView.frame.origin.x)
         
         self.view.bringSubviewToFront(addButtonView)
         
@@ -130,12 +132,19 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
         default:
             break
         }
-        
     }
     
     // diese Funktion behandelt die eigentliche Animation
     // wird jedes mal aufgerufen, wenn wir eine Animation abfragen oder schauen, ob wir eine brauchen
     func animateTransitionIfNeeded (state : CardState, duration : TimeInterval) {
+        
+        // damit können wir den addButton entsprechend der Bewegung der CardView hinzufügen oder entfernen
+        if(Float(cardViewController.view.frame.origin.y) > addButtonPosition) {
+            addButtonView.isHidden = !addButtonView.isHidden
+        } else if(Float(cardViewController.view.frame.origin.y) < addButtonPosition) {
+            addButtonView.isHidden = !addButtonView.isHidden
+        }
+        
         // wenn wir keine Animationen haben, sollten wir die Bewegung animieren
         if runningAnimations.isEmpty {
             // wir erstellen ein Objekt der UIViewPropertyAnimator-Klasse um unsere Animation zu definieren
