@@ -154,12 +154,10 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
                     case .expanded:
                         // wir müssen den y-Wert verändern
                         // bewegt es zum öffnen nach oben
-                        // !!!!!!!!!!!!!!!! hier können wir die Bewegungsrichtung bei der Animation verändern (anders herum) !!!!!!!!!!!!!!!!
                         self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHandleAreaHeight
                     case .collapsed:
                         // wir müssen den y-Wert verändern
                         // bewegt es zum schließen nach unten
-                        // !!!!!!!!!!!!!!!! hier können wir die Bewegungsrichtung bei der Animation verändern (anders herum) !!!!!!!!!!!!!!!!
                         self.cardViewController.view.frame.origin.y = self.heightStop
                 }
             }
@@ -176,44 +174,6 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
             frameAnimator.startAnimation()
             // fügen die Animation dem Array hinzu
             runningAnimations.append(frameAnimator)
-            
-            
-            // kümmert sich darum, dass die Ecken am Ende der Animation rund sind
-            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
-                switch state {
-                    case .expanded:
-                        // wenn die Card ausgefahren ist, werden die Ecken rund
-                        self.cardViewController.view.layer.cornerRadius = 12
-                    case .collapsed:
-                        // wenn die Card eingefahren ist, werden die Ecken eckig
-                        self.cardViewController.view.layer.cornerRadius = 0
-                }
-            }
-            
-            // startet die Animation
-            cornerRadiusAnimator.startAnimation()
-            // fügt die Animation dem Array hinzu
-            runningAnimations.append(cornerRadiusAnimator)
-            
-            /*
-            // kümmert sich darum, dass der Hintergrund unscharf wird
-            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-                switch state {
-                    case .expanded:
-                        // wenn die Karte ausgefahren ist, wir der Hintergrund dunkel
-                        self.visualEffectView.effect = UIBlurEffect(style: .dark)
-                    case .collapsed:
-                        // wenn die Karte eingefahren ist, verändert sich der Hintergrund nicht
-                        self.visualEffectView.effect = nil
-                }
-            }
-            
-            // startet die Animation
-            blurAnimator.startAnimation()
-            // fügt die Animation dem Array hinzu
-            runningAnimations.append(blurAnimator)
- */
-            
         }
     }
     

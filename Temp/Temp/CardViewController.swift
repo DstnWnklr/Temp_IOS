@@ -29,16 +29,19 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.frame = tableView.frame.inset(by: UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0))
     }
     
+    // diese Funktion legt fest, wie viele Spalten unsere TableView haben wird
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vegetable.count
     }
     
+    //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ImageFolderTableCell
         
         return cell
     }
     
+    // diese Funktion kann Werte zu unserer TableView hinzufügen
     func addTableContent() -> Bool {
         vegetable.insert("Test \(Int.random(in: 0..<6))", at: vegetable.startIndex)
         vegImges.insert("Test \(Int.random(in: 0..<6))", at: vegImges.startIndex)
@@ -48,14 +51,16 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return false
     }
     
+    // diese Funktion ist für die Swipe Bewegungen zuständig
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        // delete
+        // fügt den Kopieren Befehl hinzu
         let delete = UIContextualAction(style: .normal, title: nil) { (action, view, completionHandler) in
             print("Delete \(indexPath.row + 1)")
             completionHandler(true)
         }
     
+        // um Bilder zu verkleinern
         delete.image = resizeImage(image: UIImage(named: "Temp_Icon_Trash_Can")!, targetSize: CGSize(width: 50, height: 50))
         delete.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
